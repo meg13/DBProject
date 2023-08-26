@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd"
+             version="3.0">
+    <persistence-unit name="default">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <class>entity.AppartenenzaA</class>
+        <class>entity.AppartenenzaR</class>
+        <class>entity.Artisti</class>
+        <class>entity.Ascoltatori</class>
+        <class>entity.Ascolti</class>
+        <class>entity.Autori</class>
+        <class>entity.Band</class>
+        <class>entity.Brani</class>
+        <class>entity.Composizione</class>
+        <class>entity.Concerti</class>
+        <class>entity.Data</class>
+        <class>entity.Generimusicali</class>
+        <class>entity.Inclusione</class>
+        <class>entity.Interpretazione</class>
+        <class>entity.Playlist</class>
+        <class>entity.Produttori</class>
+        <class>entity.Produzione</class>
+        <class>entity.Raccoltebrani</class>
+        <class>entity.Scrittura</class>
+        <class>entity.Solisti</class>
+        <properties>
+            <property name="toplink.jdbc.url" value="jdbc:mysql://localhost:3306/rhythmpedia"/>
+            <property name="toplink.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+            <property name="toplink.jdbc.user" value="root"/>
+            <property name="toplink.jdbc.password" value="UniMarghe23"/>
+            <property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/rhythmpedia"/>
+            <property name="hibernate.connection.driver_class" value="com.mysql.cj.jdbc.Driver"/>
+            <property name="hibernate.connection.username" value="root"/>
+            <property name="hibernate.connection.password" value="UniMarghe23"/>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="openjpa.ConnectionURL" value="jdbc:mysql://localhost:3306/rhythmpedia"/>
+            <property name="openjpa.ConnectionDriverName" value="com.mysql.cj.jdbc.Driver"/>
+            <property name="openjpa.ConnectionUserName" value="root"/>
+            <property name="openjpa.ConnectionPassword" value="UniMarghe23"/>
+            <property name="eclipselink.jdbc.url" value="jdbc:mysql://localhost:3306/rhythmpedia"/>
+            <property name="eclipselink.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+            <property name="eclipselink.jdbc.user" value="root"/>
+            <property name="eclipselink.jdbc.password" value="UniMarghe23"/>
+            <property name="hibernate.transaction.jta.platform" value="org.hibernate.service.jta.platform.internal.JBossAppServerJtaPlatform" />
+        </properties>
+    </persistence-unit>
+</persistence>
