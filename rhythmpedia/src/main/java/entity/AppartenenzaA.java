@@ -54,4 +54,12 @@ public class AppartenenzaA {
         result = 31 * result + (nomeGenere != null ? nomeGenere.hashCode() : 0);
         return result;
     }
+
+    @Override
+    public String toString() {
+        return "AppartenenzaA{" +
+                "nomeArtista='" + nomeArtista + '\'' +
+                ", nomeGenere='" + nomeGenere + '\'' +
+                '}';
+    }
 }

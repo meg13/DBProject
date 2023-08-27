@@ -66,4 +66,13 @@ public class Artisti {
         result = 31 * result + (fineAttività != null ? fineAttività.hashCode() : 0);
         return result;
     }
+
+    @Override
+    public String toString() {
+        return "Artisti{" +
+                "nomeArte='" + nomeArte + '\'' +
+                ", inizioAttività=" + inizioAttività +
+                ", fineAttività=" + fineAttività +
+                '}';
+    }
 }
