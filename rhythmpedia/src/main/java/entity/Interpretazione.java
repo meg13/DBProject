@@ -53,4 +53,12 @@ public class Interpretazione {
         result = 31 * result + (codiceBrano != null ? codiceBrano.hashCode() : 0);
         return result;
     }
+
+    @Override
+    public String toString() {
+        return "Interpretazione{" +
+                "nomeArtista='" + nomeArtista + '\'' +
+                ", codiceBrano='" + codiceBrano + '\'' +
+                '}';
+    }
 }

@@ -82,4 +82,14 @@ public class Ascolti {
         result = 31 * result + (codiceBrano != null ? codiceBrano.hashCode() : 0);
         return result;
     }
+
+    @Override
+    public String toString() {
+        return "Ascolti{" +
+                "nomeUtente='" + nomeUtente + '\'' +
+                ", data=" + data +
+                ", momentoAscolto=" + momentoAscolto +
+                ", codiceBrano='" + codiceBrano + '\'' +
+                '}';
+    }
 }
