@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.ProfileController">
+   <children>
+      <TextField fx:id="nome" layoutX="33.0" layoutY="106.0" />
+      <TextField fx:id="cognome" layoutX="195.0" layoutY="149.0" />
+      <TextField fx:id="nazionalità" layoutX="195.0" layoutY="231.0" />
+      <TextField fx:id="datanascita" layoutX="33.0" layoutY="187.0" />
+      <TextField fx:id="inizioattività" layoutX="33.0" layoutY="342.0" />
+      <TextArea fx:id="generi" layoutX="372.0" layoutY="105.0" prefHeight="114.0" prefWidth="150.0" />
+      <TextArea fx:id="album" layoutX="364.0" layoutY="247.0" prefHeight="120.0" prefWidth="150.0" />
+      <TextField fx:id="concerto" layoutX="195.0" layoutY="307.0" />
+      <Label fx:id="nome_arte" layoutX="183.0" layoutY="37.0" prefHeight="51.0" prefWidth="234.0">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Button fx:id="menu" layoutX="534.0" layoutY="355.0" mnemonicParsing="false" onAction="#backToMenu" text="Menu" />
+      <Label layoutX="372.0" layoutY="88.0" prefHeight="18.0" prefWidth="150.0" text="genere di appartenenza :">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+      <Label layoutX="364.0" layoutY="226.0" prefHeight="18.0" prefWidth="150.0" text="album :">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+      <TextField fx:id="minuti" layoutX="33.0" layoutY="270.0" />
+      <Label layoutX="32.0" layoutY="88.0" prefHeight="18.0" prefWidth="150.0" text="nome:">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+      <Label layoutX="32.0" layoutY="165.0" prefHeight="18.0" prefWidth="150.0" text="data di nascita :">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+      <Label layoutX="32.0" layoutY="247.0" prefHeight="18.0" prefWidth="150.0" text="minuti ascoltati :">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+      <Label layoutX="32.0" layoutY="323.0" prefHeight="18.0" prefWidth="150.0" text="inizio attività:">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+      <Label layoutX="194.0" layoutY="132.0" prefHeight="18.0" prefWidth="150.0" text="cognome :">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+      <Label layoutX="194.0" layoutY="217.0" prefHeight="18.0" prefWidth="150.0" text="nazionalità :">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+      <Label layoutX="194.0" layoutY="286.0" prefHeight="18.0" prefWidth="150.0" text="fine attività :">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
