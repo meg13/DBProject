@@ -19,7 +19,7 @@
       <TextField fx:id="concerto" layoutX="195.0" layoutY="307.0" />
       <Label fx:id="nome_arte" layoutX="183.0" layoutY="37.0" prefHeight="51.0" prefWidth="234.0">
          <font>
-            <Font size="14.0" />
+            <Font size="18.0" />
          </font></Label>
       <Button fx:id="menu" layoutX="534.0" layoutY="355.0" mnemonicParsing="false" onAction="#backToMenu" text="Menu" />
       <Label layoutX="372.0" layoutY="88.0" prefHeight="18.0" prefWidth="150.0" text="genere di appartenenza :">
@@ -63,7 +63,7 @@
             <Font size="10.0" />
          </font>
       </Label>
-      <Label layoutX="194.0" layoutY="286.0" prefHeight="18.0" prefWidth="150.0" text="fine attività :">
+      <Label layoutX="194.0" layoutY="286.0" prefHeight="18.0" prefWidth="150.0" text="in concerto:">
          <font>
             <Font size="10.0" />
          </font>

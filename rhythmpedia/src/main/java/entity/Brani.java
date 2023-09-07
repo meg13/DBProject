@@ -3,6 +3,7 @@ package entity;
 import javax.persistence.*;
 import java.sql.Date;
 import java.sql.Time;
+import java.time.Duration;
 
 @Entity
 public class Brani {

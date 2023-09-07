@@ -22,12 +22,6 @@ public class QueryManager {
 
     }
 
-    /*Method to get for a selected genres the list of the artists*/
-    private List<AppartenenzaA> getCorrispondentGenres(String genres) {
-        return entityManager.createNativeQuery("SELECT nomeArtista from appartenenza_a WHERE nomeGenere= :genres",
-                AppartenenzaA.class).setParameter("genres",genres).getResultList();
-    }
-
 
     public Map<String, BigInteger> artistCharts() {
 
@@ -96,10 +90,10 @@ public class QueryManager {
         return charts;
 
     }
-    public String ascoltoTotale(final String artista){
-        Object durata = entityManager.createNativeQuery("select sec_to_time(sum(time_to_sec(durata))) as minuti from brani a join ascolti a2 on a.codiceBrano = a2.codiceBrano join interpretazione i on a.codiceBrano = i.codiceBrano join artisti c on i.nomeArtista= c.nomeArte where nomeArtista= :artista")
+    public Object ascoltoTotale(final String artista){
+        Object durata = entityManager.createNativeQuery("select sum(time_to_sec(durata)) / 60 as minuti from brani a join ascolti a2 on a.codiceBrano = a2.codiceBrano join interpretazione i on a.codiceBrano = i.codiceBrano join artisti c on i.nomeArtista= c.nomeArte where nomeArtista= :artista")
                 .setParameter("artista",artista).getSingleResult();
-        return (String) durata;
+        return durata;
     }
     public List<Object> Tour(final String artist){
         List<Object> tourDates = entityManager.createNativeQuery("select * from artisti b join concerti a on b.nomeArte = a.nomeArtista where data > CURRENT_DATE && b.nomeArte= :artist")

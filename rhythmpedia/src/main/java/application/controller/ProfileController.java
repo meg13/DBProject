@@ -86,6 +86,7 @@ public class ProfileController extends Controller{
             getCorrispondentGenres(solo);
             getArtistAlbum(solo);
             isInConcert(solo);
+            getTime(solo);
 
         }
 
@@ -130,7 +131,7 @@ public class ProfileController extends Controller{
             getCorrispondentGenres(band);
             getArtistAlbum(band);
             isInConcert(band);
-            //getTime(band);
+            getTime(band);
 
         }
     }
@@ -152,18 +153,10 @@ public class ProfileController extends Controller{
     }
 
     public void getTime(final String artist){
-        String time = getQueryManager().ascoltoTotale(artist);
-        String[] parts = time.split(":");
-        int hours = Integer.parseInt(parts[0]);
-        int minutes = Integer.parseInt(parts[1]);
-        int seconds = Integer.parseInt(parts[2]);
 
-        int totalMinutes = hours * 60 + minutes;
-        int totalSeconds = totalMinutes * 60 + seconds;
+        Object time = getQueryManager().ascoltoTotale(artist);
 
-        String durationString = String.format("%d:%02d:%02d", totalMinutes / 60, totalMinutes % 60, seconds);
-
-        minuti.setText(durationString);
+        minuti.setText(String.valueOf(time));
 
 
 
